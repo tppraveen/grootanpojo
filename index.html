@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Praveen tp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="boots.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body  class="container-fluid"  >
+    <h3>Convert JSON to POJO class </h3> 
+    <div class="col-md-12 text-center">
+        <button type="button" id="2csharp" value="submit" class="btn btn-primary">CONVERT</button>
+        <a href="" class="text-dark"><button type="button" class="btn btn-warning"> Reset</button></a>
+    </div>
+    <br>    
+    <div class="row">
+        <div class="col-6 h-100">
+            <label>Enter JSON Code:</label>
+            <textarea class="form-control resizable" rows="15" id="jsonval"></textarea>
+        </div>
+        <div class="col-6 h-100">
+                <label>Result POJO Class:</label>
+                <textarea name="res" class="form-control resizable"  rows="15" id="result"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <button onclick="myFunction()" class="btn btn-danger float-sm-right ">Copy code</button>
+                    </div>
+                    <div class="col">
+                        <a href="Converted.java" download>
+                            <button type="submit" class="btn btn-danger m2 ">Download</button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("result");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the POJO Java code");
+}
+</script>    
+<script async src="frame.js"></script>
+<script src="txt.js"></script>
+<script type="text/javascript" src="textcompress.js"></script>
+<script type="text/javascript" src="convert.js"></script>
+<script>
+    jsontool.jsontocsharp.init();
+</script>
+<footer>
+    <p class="float-sm-right">Created and developed by Praveen </p>
+</footer>
+</body>
+</html>
